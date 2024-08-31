@@ -1,4 +1,4 @@
-# Simple install scripts to use after system rebuild
+# Simple install scripts to use after system rebuild (for myself)
 
 ### Install cargo utils and add aliases to path
 ```shell
