@@ -10,10 +10,10 @@ cargo install exa;
 cargo install zoxide --locked;
 cargo install cargo-update
 
-BASH="$HOME/.bashrc"
+BASHRC="$HOME/.bashrc"
 
-if [[ -e $BASH ]]; then
-    sed -i '/DAH SHELL DEFINITIONS/,/DAH SHELL END/d' $BASH
+if [[ -e $BASHRC ]]; then
+    sed -i '/DAH SHELL DEFINITIONS/,/DAH SHELL END/d' $BASHRC
     echo "
 # DAH SHELL DEFINITIONS
 
@@ -30,10 +30,10 @@ alias cargo-update=\"cargo install-update -a\"
 alias rfmt=\"cargo fmt && cargo test\"
 
 # DAH SHELL END
-" >> $BASH
+" >> $BASHRC
+    echo "DONE"
+    source $BASHRC
 else
     echo "Could not find .bashrc in home dir!";
     exit 1;
 fi
-
-# source $BASH
