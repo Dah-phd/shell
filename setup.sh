@@ -8,7 +8,9 @@ cargo install --locked bat;
 cargo install ripgrep;
 cargo install exa;
 cargo install zoxide --locked;
+cargo install idiom`
 cargo install cargo-update
+rustup component add rust-analyzer
 
 BASHRC="$HOME/.bashrc"
 
