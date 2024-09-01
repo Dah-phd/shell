@@ -4,12 +4,13 @@ if (("$?" != "0")); then
     exit 1;
 fi
 echo "installing rust utils ..."
-cargo install --locked bat;
-cargo install ripgrep;
-cargo install exa;
-cargo install zoxide --locked;
+cargo install --locked bat
+cargo install ripgrep
+cargo install exa
+cargo install zoxide --locked
 cargo install idiom
 cargo install cargo-update
+cargo install starship --locked
 rustup component add rust-analyzer
 
 BASHRC="$HOME/.bashrc"
@@ -18,6 +19,9 @@ if [[ -e $BASHRC ]]; then
     sed -i '/DAH SHELL DEFINITIONS/,/DAH SHELL END/d' $BASHRC
     echo "
 # DAH SHELL DEFINITIONS
+
+# init starship
+eval \"\$(starship init bash)\"
 
 # init zoxide
 eval \"\$(zoxide init bash)\"
