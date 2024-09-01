@@ -1,5 +1,8 @@
 # Simple install scripts to use after system rebuild (for myself)
 
+### Requirements
+* build essentials /cmake, gcc, etc .../
+
 ### Install cargo utils and add aliases to path
 ```shell
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
